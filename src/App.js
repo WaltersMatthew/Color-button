@@ -21,6 +21,7 @@ function App() {
                 defaultChecked={buttonDisabled}
                 onChange={(e) => setButtonDisabled(e.target.checked)}
             />
+            <label htmlFor="disable-button-checkbox">Disable Button</label>
         </div>
     );
 }

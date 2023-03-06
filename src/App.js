@@ -19,23 +19,27 @@ function App() {
         buttonColor === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed";
 
     return (
-        <div>
-            <button
-                style={{
-                    backgroundColor: buttonDisabled ? "gray" : buttonColor,
-                }}
-                onClick={() => setButtonColor(newButtonColor)}
-                disabled={buttonDisabled}
-            >
-                Change to {replaceCamelWithSpaces(newButtonColor)}
-            </button>
-            <input
-                id="disable-button-checkbox"
-                type="checkbox"
-                defaultChecked={buttonDisabled}
-                onChange={(e) => setButtonDisabled(e.target.checked)}
-            />
-            <label htmlFor="disable-button-checkbox">Disable Button</label>
+        <div className="container">
+            <div className="button">
+                <button
+                    style={{
+                        backgroundColor: buttonDisabled ? "gray" : buttonColor,
+                    }}
+                    onClick={() => setButtonColor(newButtonColor)}
+                    disabled={buttonDisabled}
+                >
+                    Change to {replaceCamelWithSpaces(newButtonColor)}
+                </button>
+            </div>
+            <div className="disable">
+                <input
+                    id="disable-button-checkbox"
+                    type="checkbox"
+                    defaultChecked={buttonDisabled}
+                    onChange={(e) => setButtonDisabled(e.target.checked)}
+                />
+                <label htmlFor="disable-button-checkbox">Disable Button</label>
+            </div>
         </div>
     );
 }
